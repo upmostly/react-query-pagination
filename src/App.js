@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import TableHeader from "./components/tableHeader/TableHeader";
+import TableRow from "./components/tableRow/TableRow";
+import Pagination from "./components/pagination/Pagination";
 
-function App() {
+const App = () => {
+  const [activePage, setActivePage] = useState(1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TableHeader />
+      <TableRow />
+      <Pagination
+        activePage={activePage}
+        setActivePage={setActivePage}
+        pages={2}
+      />
+    </>
   );
-}
+};
 
 export default App;

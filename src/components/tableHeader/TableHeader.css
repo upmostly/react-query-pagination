@@ -1,0 +1,21 @@
+body {
+  background-color: #e7eff8;
+}
+
+.table-header {
+  background-color: #f5f7fb;
+  height: 50px;
+  width: 60%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
+  border-radius: 5px;
+  border: 1px solid #ecf2f7;
+  display: flex;
+  align-items: center;
+}
+
+.table-header > span {
+  width: 50%;
+  padding-left: 5%;
+}
